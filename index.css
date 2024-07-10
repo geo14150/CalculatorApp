@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+
+*{
+ font-family: "Oswald", sans-serif;
+ }
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #b3d4fc;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.calculator {
+    width: min(280px,80%);
+    padding: 20px;
+    border-radius: 20px;
+    background: linear-gradient(to top left, #1a1a1a, #444444);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.display {
+    font-size: 1.5em;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #222;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.expression {
+    font-size: 1em;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.result {
+    font-size: 1.5em;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.result.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    padding: 20px;
+    border-radius: 10px;
+    background: #333;
+    color:cyan;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    
+}
+
+.button.operator {
+    background:#555;
+    color:white;
+}
+
+.button.equal {
+    background: #2196F3;
+    color: white;
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+
+.button:focus {
+    outline: none;
+}
