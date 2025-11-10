@@ -1,6 +1,5 @@
 
 
-alert("give a upvote if u liked")
 window.onload=()=>{
 const expressionElement = document.getElementById('expression');
 const resultElement = document.getElementById('result');
